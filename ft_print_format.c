@@ -21,7 +21,7 @@ int	ft_print_format(char c, va_list args)
 		i += ft_char(va_arg(args, int));
 	else if (c == 's')
 		i += ft_str(va_arg(args, char *));
-	else if (c == 'd' ||c == 'i')
+	else if (c == 'd' || c == 'i')
 		i += ft_dig((long)(va_arg(args, int)), 10, 1);
 	else if (c == 'x')
 		i += ft_dig((long)(va_arg(args, unsigned int)), 16, 1);

@@ -14,12 +14,12 @@
 
 int	ft_printf(char const *format, ...)
 {
-	int	i;
+	int		i;
 	va_list	args;
-	va_start(args, format);
 
+	va_start(args, format);
 	i = 0;
-	while(*format)
+	while (*format)
 	{
 		if (*format == '%')
 			i += ft_print_format(*++format, args);

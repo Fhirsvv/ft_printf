@@ -25,12 +25,12 @@
 #  define BUFFER_SIZE 5
 # endif
 
-int ft_char(int c);
-int ft_dig(long nb, int base, int n);
-int	ft_print_format(char c, va_list args);
-int	ft_printf(char const *format, ...);
-int	ft_ptr(void *str);
-int	ft_str(char *str);
+int		ft_char(int c);
+int		ft_dig(long nb, int base, int n);
+int		ft_print_format(char c, va_list args);
+int		ft_printf(char const *format, ...);
+int		ft_ptr(void *str);
+int		ft_str(char *str);
 size_t	ft_strlen(const char *str);
 
 #endif
