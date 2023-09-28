@@ -1,9 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_format.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ecortes- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/28 16:03:20 by ecortes-          #+#    #+#             */
+/*   Updated: 2023/09/28 16:03:21 by ecortes-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_char(int c);
-int ft_dig(long nb, int base, int n);
-int	ft_ptr(void *str);
-int	ft_str(char *str);
+#include "ft_printf.h"
 
 int	ft_print_format(char c, va_list args)
 {
