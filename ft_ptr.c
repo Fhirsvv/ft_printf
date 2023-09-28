@@ -16,7 +16,12 @@ int	ft_ptr(void *str)
 {
 	long	arr;
 
-	arr = (long)&str;
+	if (str == NULL)
+	{
+		write(1, "0x0", 3);
+		return (3);
+	}
+	arr = (long)str;
 	write(1, "0x", 2);
 	return (ft_dig(arr, 16, 1) + 2);
 }
