@@ -29,7 +29,7 @@ int	ft_dig(long nb, int base, int n)
 			return (-1);
 	}
 	else if (nb < base)
-		return (ft_putchar_fd(dicc[nb], 1));
+		return (ft_char(dicc[nb]));
 	else
 	{
 		i = ft_dig(nb / base, base, n);
