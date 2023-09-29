@@ -18,9 +18,9 @@ int	ft_print_format(char c, va_list args)
 
 	i = 0;
 	if (c == 'c')
-		i += ft_char(va_arg(args, int));
+		i += ft_putchar_fd(va_arg(args, int), 1);
 	else if (c == 's')
-		i += ft_str(va_arg(args, char *));
+		i += ft_putstr_fd(va_arg(args, char *), 1);
 	else if (c == 'd' || c == 'i')
 		i += ft_dig((long)(va_arg(args, int)), 10, 1);
 	else if (c == 'x')
@@ -32,11 +32,9 @@ int	ft_print_format(char c, va_list args)
 	else if (c == 'p')
 	{
 		i += write(1, "0x", 2);
-		i += ft_ptr(va_arg(args, unsigned long));
+		if (i != -1)
+			i += ft_ptr(va_arg(args, unsigned long));
 	}
 	else if (c == '%')
-		i += ft_char(c);
-	else
-		return (-1);
-	return (i);
-}
+		i += ft_putchar_fd(c, 1);
+	

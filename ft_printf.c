@@ -15,6 +15,7 @@
 int	ft_printf(char const *format, ...)
 {
 	int		i;
+	int		check;
 	va_list	args;
 
 	va_start(args, format);
@@ -24,8 +25,17 @@ int	ft_printf(char const *format, ...)
 		if (*format == '%')
 			i += ft_print_format(*++format, args);
 		else
-			i += write(1, format, 1);
+		{
+			check = write(1, format, 1);
+			if (check != -1)
+				i += check;
+		}
 		++format;
+		if (i < 0 || check == -1)
+		{
+			va_end(args);
+			return (-1);
+		}
 	}
 	va_end(args);
 	return (i);

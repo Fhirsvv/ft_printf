@@ -14,13 +14,17 @@
 
 int	ft_ptr(unsigned long pt)
 {
-	char *dicc;
-	int i;
+	char	*dicc;
+	int		i;
+	int		b;
 
 	i = 0;
 	dicc = "0123456789abcdef";
 	if (pt >= 16)
 		i += ft_ptr(pt / 16);
-	i += write(1, dicc + (pt % 16), 1);
+	b = write(1, dicc + (pt % 16), 1);
+	if (b == -1)
+		return (-1);
+	i += b;
 	return (i);
 }

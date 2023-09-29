@@ -17,11 +17,12 @@ int	ft_str(char *str)
 	size_t	i;
 
 	if (!str)
-		str = "(null)";
+		return (ft_str("(null)"));
 	i = 0;
 	while (str[i])
 	{
-		ft_char(str[i]);
+		if (write(1, &str[i], 1) == -1)
+			return (-1);
 		i++;
 	}
 	return (i);

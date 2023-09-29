@@ -22,7 +22,7 @@
 # include <stdarg.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 5
+#  define BUFFER_SIZE 100
 # endif
 
 int		ft_char(int c);

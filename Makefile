@@ -16,7 +16,7 @@ ft_ptr.c \
 
 OBJS = $(SRCS:.c=.o)
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -g #-g3  -fsanitize=address
+CFLAGS = -Wall -Werror -Wextra -g3 -fsanitize=address
 AR = ar
 ARFLAGS = rcs
 RM = rm -f

@@ -21,16 +21,20 @@ int	ft_dig(long nb, int base, int n)
 		dicc = "0123456789abcdef";
 	else
 		dicc = "0123456789ABCDEF";
-	if (nb < 0)
+	if (nb < 0 && base == 10)
 	{
-		write(1, "-", 1);
-		return (ft_dig(-nb, base, n) + 1);
+		if (write(1, "-", 1) != -1)
+			return (ft_dig(-nb, base, n) + 1);
+		else
+			return (-1);
 	}
 	else if (nb < base)
-		return (ft_char(dicc[nb]));
+		return (ft_putchar_fd(dicc[nb], 1));
 	else
 	{
 		i = ft_dig(nb / base, base, n);
+		if (i <= -1)
+			return (-1);
 		return (i + ft_dig(nb % base, base, n));
 	}
 }
