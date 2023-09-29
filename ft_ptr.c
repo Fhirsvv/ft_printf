@@ -3,25 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ptr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecortes- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: edu <edu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:04:15 by ecortes-          #+#    #+#             */
-/*   Updated: 2023/09/28 16:04:17 by ecortes-         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:16:54 by edu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_ptr(void *str)
+int	ft_ptr(unsigned long pt)
 {
-	long	arr;
+	char *dicc;
+	int i;
 
-	if (str == NULL)
-	{
-		write(1, "0x0", 3);
-		return (3);
-	}
-	arr = (long)str;
-	write(1, "0x", 2);
-	return (ft_dig(arr, 16, 1) + 2);
+	i = 0;
+	dicc = "0123456789abcdef";
+	if (pt >= 16)
+		i += ft_ptr(pt / 16);
+	i += write(1, dicc + (pt % 16), 1);
+	return (i);
 }

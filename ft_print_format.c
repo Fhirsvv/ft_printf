@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_format.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecortes- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: edu <edu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:03:20 by ecortes-          #+#    #+#             */
-/*   Updated: 2023/09/28 16:03:21 by ecortes-         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:16:38 by edu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,10 @@ int	ft_print_format(char c, va_list args)
 	else if (c == 'u')
 		i += ft_dig((long)(va_arg(args, unsigned int)), 10, 1);
 	else if (c == 'p')
-		i += ft_ptr(va_arg(args, void *));
+	{
+		i += write(1, "0x", 2);
+		i += ft_ptr(va_arg(args, unsigned long));
+	}
 	else if (c == '%')
 		i += ft_char(c);
 	else

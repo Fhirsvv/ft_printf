@@ -3,20 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ecortes- <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: edu <edu@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 16:05:04 by ecortes-          #+#    #+#              #
-#    Updated: 2023/09/28 16:05:06 by ecortes-         ###   ########.fr        #
+#    Updated: 2023/09/29 11:28:40 by edu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 SRCS = ft_printf.c ft_char.c ft_dig.c ft_str.c ft_print_format.c \
-ft_ptr.c ft_strlen.c\
+ft_ptr.c \
 
 OBJS = $(SRCS:.c=.o)
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra #-g3  -fsanitize=address
+CFLAGS = -Wall -Werror -Wextra -g #-g3  -fsanitize=address
 AR = ar
 ARFLAGS = rcs
 RM = rm -f

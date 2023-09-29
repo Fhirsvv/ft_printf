@@ -1,6 +1,6 @@
 # Prerequisites
 *.d
-
+main.c
 # Ds_Store
 .DS_Store
 ._DS_Store

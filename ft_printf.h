@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecortes- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: edu <edu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 15:57:04 by ecortes-          #+#    #+#             */
-/*   Updated: 2023/09/28 15:57:06 by ecortes-         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:51:44 by edu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ int		ft_char(int c);
 int		ft_dig(long nb, int base, int n);
 int		ft_print_format(char c, va_list args);
 int		ft_printf(char const *format, ...);
-int		ft_ptr(void *str);
+int		ft_ptr(unsigned long ptr);
 int		ft_str(char *str);
-size_t	ft_strlen(const char *str);
 
 #endif

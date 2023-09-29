@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecortes- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: edu <edu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:04:38 by ecortes-          #+#    #+#             */
-/*   Updated: 2023/09/28 16:04:40 by ecortes-         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:06:03 by edu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,12 @@ int	ft_str(char *str)
 	size_t	i;
 
 	if (!str)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
+		str = "(null)";
 	i = 0;
-	while (i < ft_strlen(str))
+	while (str[i])
 	{
 		ft_char(str[i]);
 		i++;
 	}
-	return (ft_strlen(str));
+	return (i);
 }
