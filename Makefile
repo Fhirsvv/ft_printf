@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: edu <edu@student.42.fr>                    +#+  +:+       +#+         #
+#    By: ecortes- <ecortes-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 16:05:04 by ecortes-          #+#    #+#              #
-#    Updated: 2023/09/29 11:28:40 by edu              ###   ########.fr        #
+#    Updated: 2023/11/21 16:10:23 by ecortes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 SRCS = ft_printf.c ft_char.c ft_dig.c ft_str.c ft_print_format.c \
-ft_ptr.c \
+ft_ptr.c main.c
 
 OBJS = $(SRCS:.c=.o)
 CC = gcc
