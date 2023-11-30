@@ -6,13 +6,13 @@
 #    By: ecortes- <ecortes-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 16:05:04 by ecortes-          #+#    #+#              #
-#    Updated: 2023/11/21 16:10:23 by ecortes-         ###   ########.fr        #
+#    Updated: 2023/11/30 16:40:22 by ecortes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 SRCS = ft_printf.c ft_char.c ft_dig.c ft_str.c ft_print_format.c \
-ft_ptr.c main.c
+ft_ptr.c
 
 OBJS = $(SRCS:.c=.o)
 CC = gcc
