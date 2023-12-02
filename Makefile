@@ -6,7 +6,7 @@
 #    By: ecortes- <ecortes-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 16:05:04 by ecortes-          #+#    #+#              #
-#    Updated: 2023/11/30 16:40:22 by ecortes-         ###   ########.fr        #
+#    Updated: 2023/12/01 17:01:16 by ecortes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ ft_ptr.c
 
 OBJS = $(SRCS:.c=.o)
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -g3 -fsanitize=address
+CFLAGS = -Wall -Werror -Wextra #-g3 -fsanitize=address
 AR = ar
 ARFLAGS = rcs
 RM = rm -f
